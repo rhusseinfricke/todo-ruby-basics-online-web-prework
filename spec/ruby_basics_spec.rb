@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../lib/ruby_basics.rb'
+require_relative './lib/ruby_basics.rb'
 
 
 describe "ruby" do
@@ -8,32 +8,34 @@ describe "ruby" do
     it 'given two numbers returns quotient of the first number divided by the second number' do
       num1 = 42
       num2 = 7
-
+      quotient = num1/num2
+      puts quotient
       expect(division(num1,num2)).to eq(6)
     end
   end
 
-  describe '#assign_variable' do
+  describe(value) '#assign_variable' do
     it 'takes an argument of a persons name and assign it to a variable name' do
       value = "Bob"
+      puts #{value}
 
       expect(assign_variable(value)).to eq(value)
     end
   end
 
-  describe '#argue' do
+  describe(phrase) '#argue' do
     it 'accepts an argument and return that argument as is' do
       phrase = "I'm right and you are wrong!"
-
+      puts #{phrase}
       expect(argue(phrase)).to eq(phrase)
     end
   end
 
-  describe '#greeting' do
+  describe(greeting, name) '#greeting' do
     it 'takes two arguments' do
       greeting = "Hi there, "
       name = "Bobby!"
-
+      puts #{greeting
       expect{ greeting(greeting, name) }.to_not raise_error
     end
 
