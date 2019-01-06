@@ -35,11 +35,11 @@ describe "ruby" do
     it 'takes two arguments' do
       greeting = "Hi there, "
       name = "Bobby!"
-      puts #{greeting
       expect{ greeting(greeting, name) }.to_not raise_error
+      end
     end
 
-    it 'raises an error with one argument' do
+    describe(greeting = Hi there) it 'raises an error with one argument' do
       greeting = "Hi there, "
 
       expect{ greeting(greeting)}.to raise_error
@@ -49,22 +49,29 @@ describe "ruby" do
   describe '#return_a_value' do
     it 'returns the phrase "Nice"' do
       expect(return_a_value).to eq("Nice")
+      return_a_value="Nice"
+      puts return_a_value
     end
   end
 
   describe '#last_evaluated_value' do
     it 'returns the phrase "expert"' do
       expect(last_evaluated_value).to eq("expert")
+      last_evaluated_value="expert"
+      puts last_evaluated_value
     end
   end
 
-  describe '#pizza_party' do
+  describe(pizza_party="cheese") '#pizza_party' do
     it 'returns "cheese" by default' do
       expect(pizza_party).to eq("cheese")
+      puts pizza_party
     end
+  end
 
-    it 'returns the argument it received' do
+    describe(pizza_party) it 'returns the argument it received' do
       expect(pizza_party("pepperoni")).to eq("pepperoni")
+      puts #{pizza_party}
     end
   end
 end
